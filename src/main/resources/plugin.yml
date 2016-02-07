@@ -1,0 +1,8 @@
+main: de.web.paulschwandes.pothealing.Entry
+version: ${project.version}
+name: ${project.name}
+commands:
+  pothealing:
+    description: PotHealing scenario toggle command
+    usage: /pothealing
+    permission: pothealing.command.toggle
