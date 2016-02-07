@@ -27,12 +27,13 @@ public class CraftingListener implements Listener {
             return;
         }
 
-        if (result.getData().getData() != 0) {
+        if (result.getDurability() != 0) {
             return;
         }
 
         boolean isGoldenHead = result.hasItemMeta() && result.getItemMeta().hasDisplayName();
         int potionLevel = isGoldenHead ? 2 : 1;
+        
         Potion potion = new Potion(PotionType.INSTANT_HEAL, potionLevel);
         ItemStack potionItemStack = potion.toItemStack(1);
         inventory.setResult(potionItemStack);
